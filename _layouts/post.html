@@ -1,0 +1,20 @@
+---
+layout: common
+---
+
+<h2>{{ page.title }}</h2>
+<p class="meta">{{ page.date.strftime('%B %d, %Y') }}</p>
+<ul class="taglist">
+  {% for tag in page.tags %}
+  <li><a href="/tags/{{tag}}.html">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
+
+<div class="page">
+  {{ content }}
+</div>
+
+<div class="signature">
+  <p>Written by Phillip Oldham, owner of Oldham-Made Ltd</p>
+  <p>&#169; {{ page.date.strftime('%Y') }}</p>
+</div>
