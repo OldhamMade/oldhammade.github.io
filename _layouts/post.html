@@ -3,10 +3,10 @@ layout: common
 ---
 
 <h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date.strftime('%B %d, %Y') }}</p>
+<p class="meta">{{ page.date | date: "%B %d, %Y" }}</p>
 <ul class="taglist">
   {% for tag in page.tags %}
-  <li><a href="/tags/{{tag}}.html">{{ tag }}</a></li>
+  <li><a href="/tags.html#{{tag}}">{{ tag }}</a></li>
   {% endfor %}
 </ul>
 
@@ -16,5 +16,5 @@ layout: common
 
 <div class="signature">
   <p>Written by Phillip Oldham, owner of Oldham-Made Ltd</p>
-  <p>&#169; {{ page.date.strftime('%Y') }}</p>
+  <p>&#169; {{ page.date | date: "%Y" }}</p>
 </div>
