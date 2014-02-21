@@ -20,9 +20,11 @@
 
 body {
     background: #FEFEFE;
-    text-rendering: optimizeLegibility;
+    //text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased;
     padding-bottom: 100px;
+    letter-spacing: -0.03em;
 
     a {
         color: #036;
@@ -54,13 +56,17 @@ body {
         overflow: auto;
     }
 
+    p {
+        word-spacing: .1em;
+        line-height: 1.4;
+    }
+
 }
 
 body div.header {
     position: relative;
     width: 700px;
     margin: 50px auto 0 auto;
-    padding: 30px 30px 0 30px;
 
 	.font-light;
 
@@ -111,7 +117,6 @@ body div.contents {
     position: relative;
     width: 700px;
     margin: 10px auto;
-    padding: 0 10px;
 
 	.font-medium;
 
@@ -127,6 +132,25 @@ body div.contents {
         .font-medium;
 
         text-transform: uppercase;
+    }
+
+    & h2 {
+        letter-spacing: -0.06em;
+    }
+
+    .backhome {
+        margin-top: 2em;
+        text-align: center;
+        font-size: .9em;
+        .font-bold;
+
+        & a{
+            color: #AAA;
+
+            &:hover {
+                color: #000;
+            }
+        }
     }
 }
 
@@ -145,6 +169,7 @@ body div.social {
         font-size: 30px;
         line-height: 30px;
         text-align: right;
+        margin: 0;
     }
 }
 
@@ -158,7 +183,8 @@ body div.social {
     }
 
     h3 {
-        line-height: 30px;
+        letter-spacing: -0.06em;
+        line-height: 1.1em;
         margin: 1em 0 .3em 0;
         width: 70%;
         float: left;
@@ -171,7 +197,7 @@ body div.social {
         text-align: right;
         width: 30%;
         float: left;
-        line-height: 40px;
+        line-height: 2em;
     }
 
 }
@@ -190,6 +216,7 @@ blockquote {
     padding: 0;
     font-size: .8em;
     .font-bold;
+    letter-spacing: -0.06em;
 
     li {
         display: inline;

@@ -4,7 +4,9 @@ title: "Running with Jython"
 excerpt: ""
 tags:
   - development
-  - jython-python-java
+  - jython
+  - python
+  - java
 published: true
 ---
 
