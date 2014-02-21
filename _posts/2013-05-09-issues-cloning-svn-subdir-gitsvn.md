@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Can't clone svn subdirectory using git-svn?
+excerpt: ""
 tags:
   - git
   - svn

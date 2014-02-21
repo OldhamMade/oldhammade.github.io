@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Changing OS X system date from Terminal
+excerpt: ""
 tags:
   - OS X
   - command line

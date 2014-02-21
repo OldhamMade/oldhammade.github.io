@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+	<title>Setting up vsftpd on CentOS - Oldham-Made: python/php/nodejs/xquery development</title>
+
+    <meta charset="utf-8" />
+
+    <meta http-equiv="imagetoolbar" content="no"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0" />
+    <meta name="robots" content="index,follow"/>
+    <meta name="author" content="Oldham-Made" />
+    <meta name="language" content="english" />
+
+    <meta name="description" content="Contract/freelance Python, XSL/XQuery, and NodeJS development and consultancy." />
+    <meta name="keywords" content="contract development, web consultancy, web developer, php developer, python developer, xquery developer, nodejs developer, xsl developer" />
+
+    <link rel="canonical" href="http://oldham-made.net/" />
+
+    <!--[if lt IE 9]>
+        <script src="/js/html5.js"></script>
+        <![endif]-->
+	<link rel="stylesheet" href="http://fast.fonts.net/cssapi/bdf47b5b-d16e-4862-aa49-8d2224a2416b.css" />
+	<link rel="stylesheet" href="http://highlightjs.org/static/styles/foundation.css" />
+	<link rel="stylesheet" href="/webfonts/ss-social-circle.css" type="text/css" />
+    <link rel="stylesheet" href="/css/compiled.css" />
+
+    <script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+  </head>
+  <body>
+
+    <div class="header">
+      <h1><a href="/">OLDHAM<span>MADE</span></a></h1>
+      <p>Python, XSL/XQuery, NodeJS development and consultancy.</p>
+    </div>
+
+    <div class="social">
+      <p>
+      	<a href="mailto:info@oldham-made.net" title="Email" class="ss-icon email">Email</a>
+      	<a href="http://twitter.com/OldhamMade" title="Twitter" class="ss-icon twitter">Twitter</a>
+      	<a href="http://github.com/OldhamMade" title="Github" class="ss-icon octocat">Octocat</a>
+      </p>
+    </div>
+
+    <div class="contents"><h2>Setting up vsftpd on CentOS</h2>
+<p class="meta">January 01, 2013</p>
+<ul class="taglist">
+  
+  <li><a href="/tags.html#server">server</a></li>
+  
+  <li><a href="/tags.html#devops">devops</a></li>
+  
+</ul>
+
+<div class="page">
+  <p>“vsftpd” stands for “Very Secure File Transfer Protocol Daemon”, and is one of the easier FTP daemons to install. Despite this, I’ve always had to battle with it to get it configured correctly, but I always find it’s usually down to configuring it in a rush or in the “background” while doing other things.</p>
+
+<h2 id="notes">Notes</h2>
+
+<p>The commands below are being run a priviledged user. Remember to prefix <code>sudo</code> if you’re running the commands as an unpriviledged user.</p>
+
+<p>Also, I use <code>mg</code> as my main text editor, which is an <a href="http://en.wikipedia.org/wiki/Mg_(editor">simple emacs clone</a>). Feel free to use <code>nano</code>, <code>vi</code>, or any other program in it’s place.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>If it’s not already installed, nstalling vsftpd on CentOS is as simple as:</p>
+
+<pre><code>$ yum install vsftpd</code></pre>
+
+<p>You’ll probably want to set up vsftp so it starts up with all the other services on boot:</p>
+
+<pre><code>$ chkconfig add vsftpd
+$ chkconfig vsftp on</code></pre>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>Firstly we’ll set up an FTP group:</p>
+
+<pre><code>$ groupadd ftpusers</code></pre>
+
+<p>…and an FTP-specific user:</p>
+
+<pre><code>$ useradd -G ftpusers -d /path/to/your/dir -s /sbin/nologin ftpuser</code></pre>
+
+<p>The <code>/sbin/nologin</code> shell should be listed in <code>/etc/shells</code> by default on CentOS. If not, find the location of your <code>nologin</code> binary and add the path to the end of the file.</p>
+
+<p>Then we’ll add a password for the user:</p>
+
+<pre><code>$ passwd ftpuser</code></pre>
+
+<p>Next we need to make sure that this new user has permission to read and write the directory:</p>
+
+<pre><code>$ chown -R ftpuser /path/to/your/dir
+$ chmod 775 path/to/your/dir</code></pre>
+
+<p>Now we can configure the daemon itself. Firstly, stop the daemon if it’s already running:</p>
+
+<pre><code>$ service vsftpd stop</code></pre>
+
+<p>Then we can edit the main config file:</p>
+
+<pre><code>$ mg /etc/vsftpd/vsftpd.conf</code></pre>
+
+<p>…making the following changes:</p>
+
+<p>Disable anonymous login:</p>
+
+<pre><code>anonymous_enable=NO</code></pre>
+
+<p>Enable local users:</p>
+
+<pre><code>local_enable=YES</code></pre>
+
+<p>The ftpuser should be able to write data:</p>
+
+<pre><code>write_enable=YES</code></pre>
+
+<p>Port 20 need to turned off, makes vsftpd run less privileged:</p>
+
+<pre><code>connect_from_port_20=NO</code></pre>
+
+<p>Chroot everyone:</p>
+
+<pre><code>chroot_local_user=YES</code></pre>
+
+<p>Umask should be already set to 022 in the default config file, which makes sure that all the files and folders that are uploaded receive the proper permissions (644 and 755, respectively).</p>
+
+<pre><code>local_umask=022</code></pre>
+
+<p>We also need to add the following lines to add the FTP user we created earlier:</p>
+
+<pre><code># the list of users to give access
+userlist_file=/etc/vsftpd/vsftpd.userlist
+# this list is on
+userlist_enable=YES
+# It is not a list of users to deny ftp access
+userlist_deny=NO</code></pre>
+
+<p>Then save those changes and exit.</p>
+
+<p>Next we need to create the userlist file we’ve just assigned:</p>
+
+<pre><code>$ /etc/vsftpd/vsftpd.userlist</code></pre>
+
+<p>…and add the user:</p>
+
+<pre><code>ftpuser</code></pre>
+
+<p>Save these changes and exit.</p>
+
+<p>We should be good to go, so let’s start the vsftpd:</p>
+
+<pre><code>$ service vsftpd start</code></pre>
+
+<p>If we’ve been successful, we should be able to access the ftp server. Fire up another terminal instance and try it:</p>
+
+<pre><code>$ ftp ftpuser@yourhost
+Connected to yourhost.
+220 (vsFTPd 2.2.2)
+331 Please specify the password.
+Password:</code></pre>
+
+<p>Enter your password and you should be in!</p>
+
+<h2 id="gotchas">Gotchas</h2>
+
+<p>If you’re having trouble here are a few things to check:</p>
+
+<p>Firstly, check all the paths you’ve entered. I know it seems silly, but this is usually the cause. Checking the path for the <code>nologin</code> shell, for the userlist, etc.</p>
+
+<p>SELinux always seems to get in the way. A lot of posts will tell you to simply disable it. This advice should be considered harmful. Instead, you can simply enable FTP access in SELinux using the following commands.</p>
+
+<pre><code>$ setsebool -P allow_ftpd_full_access 1
+$ setsebool -P ftp_home_dir=1</code></pre>
+
+<p>Further information on SELinux boolean flags can be found on the <a href="http://wiki.centos.org/TipsAndTricks/SelinuxBooleans">CentOS website</a>.</p>
+</div>
+
+<div class="signature">
+  <p>Written by Phillip Oldham, owner of Oldham-Made Ltd</p>
+  <p>&#169; 2013</p>
+</div>
+</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-43809303-1', 'oldham-made.net');
+	  ga('send', 'pageview');
+	</script>
+  </body>
+</html>

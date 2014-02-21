@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "XSD: import vs. include"
+excerpt: ""
 tags:
   - xsd
 ---

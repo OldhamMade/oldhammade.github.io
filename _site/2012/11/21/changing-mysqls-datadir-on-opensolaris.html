@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+	<title>Changing MySQL's datadir on OpenSolaris - Oldham-Made: python/php/nodejs/xquery development</title>
+
+    <meta charset="utf-8" />
+
+    <meta http-equiv="imagetoolbar" content="no"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0" />
+    <meta name="robots" content="index,follow"/>
+    <meta name="author" content="Oldham-Made" />
+    <meta name="language" content="english" />
+
+    <meta name="description" content="Contract/freelance Python, XSL/XQuery, and NodeJS development and consultancy." />
+    <meta name="keywords" content="contract development, web consultancy, web developer, php developer, python developer, xquery developer, nodejs developer, xsl developer" />
+
+    <link rel="canonical" href="http://oldham-made.net/" />
+
+    <!--[if lt IE 9]>
+        <script src="/js/html5.js"></script>
+        <![endif]-->
+	<link rel="stylesheet" href="http://fast.fonts.net/cssapi/bdf47b5b-d16e-4862-aa49-8d2224a2416b.css" />
+	<link rel="stylesheet" href="http://highlightjs.org/static/styles/foundation.css" />
+	<link rel="stylesheet" href="/webfonts/ss-social-circle.css" type="text/css" />
+    <link rel="stylesheet" href="/css/compiled.css" />
+
+    <script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+  </head>
+  <body>
+
+    <div class="header">
+      <h1><a href="/">OLDHAM<span>MADE</span></a></h1>
+      <p>Python, XSL/XQuery, NodeJS development and consultancy.</p>
+    </div>
+
+    <div class="social">
+      <p>
+      	<a href="mailto:info@oldham-made.net" title="Email" class="ss-icon email">Email</a>
+      	<a href="http://twitter.com/OldhamMade" title="Twitter" class="ss-icon twitter">Twitter</a>
+      	<a href="http://github.com/OldhamMade" title="Github" class="ss-icon octocat">Octocat</a>
+      </p>
+    </div>
+
+    <div class="contents"><h2>Changing MySQL's datadir on OpenSolaris</h2>
+<p class="meta">November 21, 2012</p>
+<ul class="taglist">
+  
+  <li><a href="/tags.html#server">server</a></li>
+  
+  <li><a href="/tags.html#opensolaris">opensolaris</a></li>
+  
+</ul>
+
+<div class="page">
+  <p>As we all know, OpenSolaris is great, but if you come from a RedHat/Debian background things can be a little confusing. This is especially true when setting up common software you’ve done many times before.</p>
+
+<p>If you need to change the datadir for a fresh MySQL install, for instance to take advantage of ZFS volumes, try following the steps below.</p>
+
+<p>Firstly, create the new data dir, and change ownership to the <code>mysql</code> user.</p>
+
+<pre><code>~# mkdir /mysqldatadir
+~# chown -Rf mysql:mysql /mysqldatadir</code></pre>
+
+<p>Edited the file <code>/var/svc/manifest/application/database/mysql_51.xml</code>, changing the value of the <code>data</code> node.</p>
+
+<p>Stop the service then delete and reimport the manifest file using <code>svccfg</code>.</p>
+
+<pre><code>~# svcadm disable mysql
+~# svccfg delete mysql
+~# svccfg import /var/svc/manifest/application/database/mysql_51.xml</code></pre>
+
+<p>Restart the service.</p>
+
+<pre><code>~# svcadm enable mysql</code></pre>
+
+<p>Test everything is working as expected.</p>
+
+<pre><code>~# mysql -e &quot;show variables&quot; | grep datadir</code></pre>
+
+<p>Hopefully that will get you where you need to be.</p>
+</div>
+
+<div class="signature">
+  <p>Written by Phillip Oldham, owner of Oldham-Made Ltd</p>
+  <p>&#169; 2012</p>
+</div>
+</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-43809303-1', 'oldham-made.net');
+	  ga('send', 'pageview');
+	</script>
+  </body>
+</html>
