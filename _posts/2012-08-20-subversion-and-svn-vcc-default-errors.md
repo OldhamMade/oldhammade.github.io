@@ -2,6 +2,7 @@
 layout: post
 title: "Subversion and \"/!svn/vcc/default\" errors"
 excerpt: ""
+category: blog
 tags:
   - development
   - nginx

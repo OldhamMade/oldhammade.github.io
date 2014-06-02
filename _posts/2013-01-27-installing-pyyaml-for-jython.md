@@ -2,6 +2,7 @@
 layout: post
 title: "Quick tip &#8212; Installing PyYAML for Jython"
 excerpt: ""
+category: tip
 tags:
   - server
   - jython

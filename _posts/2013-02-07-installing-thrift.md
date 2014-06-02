@@ -2,6 +2,7 @@
 layout: post
 title: "Installing thrift"
 excerpt: ""
+category: blog
 tags:
   - development
   - thrift

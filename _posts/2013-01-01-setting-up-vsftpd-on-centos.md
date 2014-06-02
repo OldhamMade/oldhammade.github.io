@@ -2,6 +2,7 @@
 layout: post
 title: "Setting up vsftpd on CentOS"
 excerpt: "I've always found setting up vsftpd a bit of a pain, so here are some simple instructions to follow and help with a few \"gotchas\"."
+category: article
 tags:
   - server
   - devops

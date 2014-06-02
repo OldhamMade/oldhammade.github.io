@@ -2,6 +2,7 @@
 layout: post
 title: "Fixing \"InnoDB is in the future!\" errors"
 excerpt: ""
+category: blog
 tags:
   - development
   - mysql

@@ -2,6 +2,7 @@
 layout: post
 title: "Running with Jython"
 excerpt: ""
+category: blog
 tags:
   - development
   - jython

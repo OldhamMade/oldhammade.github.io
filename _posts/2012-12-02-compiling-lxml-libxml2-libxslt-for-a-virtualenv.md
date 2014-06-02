@@ -2,6 +2,7 @@
 layout: post
 title: "Compiling lxml/libxml2/libxslt for a virtualenv"
 excerpt: ""
+category: blog
 tags:
   - development
   - server

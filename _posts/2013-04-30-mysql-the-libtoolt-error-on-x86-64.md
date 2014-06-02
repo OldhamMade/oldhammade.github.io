@@ -2,6 +2,7 @@
 layout: post
 title: "MySQL & the libtoolT error on x86_64"
 excerpt: "Quick fix for the `cannot remove 'libtoolT': No such file or directory` error"
+category: blog
 tags:
   - server
   - mysql

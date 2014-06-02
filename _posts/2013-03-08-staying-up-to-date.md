@@ -2,6 +2,7 @@
 layout: post
 title: "Quick tip &#8212; Staying up-to-date on linux"
 excerpt: ""
+category: tip
 tags:
   - development
   - linux-servers

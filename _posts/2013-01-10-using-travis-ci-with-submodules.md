@@ -2,6 +2,7 @@
 layout: post
 title: "Using Travis-CI with submodules"
 excerpt: "How to fix those pesky \"Permission denied\" errors"
+category: article
 tags:
   - continuous-integration
   - git

@@ -2,6 +2,7 @@
 layout: post
 title: "XSD: import vs. include"
 excerpt: ""
+category: blog
 tags:
   - xsd
 ---

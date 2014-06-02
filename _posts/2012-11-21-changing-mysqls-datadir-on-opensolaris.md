@@ -2,6 +2,7 @@
 layout: post
 title: "Changing MySQL's datadir on OpenSolaris"
 excerpt: ""
+category: blog
 tags:
   - server
   - opensolaris

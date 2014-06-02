@@ -2,6 +2,7 @@
 layout: post
 title: Quick tip &#8212; Don't set a screensaver on OS X Virtualbox guests
 excerpt: ""
+category: tip
 tags:
   - OS X
   - Virtualbox

@@ -2,6 +2,7 @@
 layout: post
 title: "OpenSolaris Cheat Sheet"
 excerpt: "Some useful commands for working with OpenSolaris"
+category: article
 tags:
   - server
   - opensolaris

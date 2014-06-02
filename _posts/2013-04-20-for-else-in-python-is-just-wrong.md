@@ -2,6 +2,7 @@
 layout: post
 title: "for...else in Python is wrong"
 excerpt: ""
+category: article
 tags:
   - development
   - python

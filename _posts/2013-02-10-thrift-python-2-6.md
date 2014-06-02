@@ -2,6 +2,7 @@
 layout: post
 title: "Thrift & Python 2.6: troubleshooting installs"
 excerpt: ""
+category: blog
 tags:
   - development
   - python

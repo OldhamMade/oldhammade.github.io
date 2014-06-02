@@ -2,6 +2,7 @@
 layout: post
 title: "Nginx, Subversion, and 413's"
 excerpt: ""
+category: blog
 tags:
   - development
   - nginx
