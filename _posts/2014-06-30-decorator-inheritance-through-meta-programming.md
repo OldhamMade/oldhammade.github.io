@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Decorator inheritance through meta-programming"
-excerpt: "Complex is better than complicated. At least for this project."
+excerpt: "Rule 4: Complex is better than complicated."
 category: blog
 tags:
   - development
