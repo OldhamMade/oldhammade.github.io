@@ -21,6 +21,6 @@ The quickest, and in my opinion the safest[^1], way to get pretty-URLs working i
 
 It's a simple thing, but it works pretty well. Just add this file to your wp root directory and point IIS's 404 handler to that file (URL, not File). A free, 2 minute fix to a problem **that shouldn't exist**[^2].
 
-[^1] My own experience has been that installing any third-party extension for IIS is time-consuming, costly, and breaks IIS in very unexpected ways which --- even after an uninstall --- is a nightmare to fix. YMMV.
+[^1]: My own experience has been that installing any third-party extension for IIS is time-consuming, costly, and breaks IIS in very unexpected ways which --- even after an uninstall --- is a nightmare to fix. YMMV.
 
-[^2] IIS should've had rewrites bundled as-of IIS4. AFAIK they're still not available even in IIS7!
+[^2]: IIS should've had rewrites bundled as-of IIS4. AFAIK they're still not available even in IIS7!
