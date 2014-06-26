@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Python: with implicit self"
-excerpt: ""
+excerpt: "A hack I'd love to see: using `with` to set attrs on `self`"
 category: blog
 tags:
   - development
   - python
 published: true
 ---
-I love Python. Having worked with it for nearly 10 years, I'd consider it my primary language now. I love it's rules, it's requirements, it's structure. But as with everything, there are some annoyances...
+I love Python. Having worked with it for nearly 10 years, I'd consider it my primary language now. I love it's rules, it's requirements, it's structure. But as with everything, there are some annoyances.
 
 One thing that we often do as Python developers is create a number of object attributes in the `__init__` method on classes. This can end up looking like a wall of text though:
 
