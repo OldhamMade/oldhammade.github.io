@@ -1,17 +1,17 @@
 ---
 layout: post
 title: "Installing Thrift on OpenSolaris"
-excerpt: "...is truly a nightmare. Following the standard in"
+excerpt: "A quick script to get you started"
 tags: 
-- server
-- open-solaris
-- thrift
+  - server
+  - open-solaris
+  - thrift
 published: true
 ---
 
-...is truly a nightmare. Following the standard install instructions, albeit with some tweaks, will get you nowhere on the OpenSolaris platform. There are many, many obstacles to overcome, and my unix-foo isn't nearly strong enough.
+Installing Thrift on OpenSolaris is a bit of a nightmare. Following the standard install instructions, albeit with some tweaks, will get you nowhere on the OpenSolaris platform. There are many, many obstacles to overcome, and if you're coming from a unix background it can be a struggle.
 
-Thankfully, others have happened across the same problems. The [HyperTable][1] project, a very admirable NoSQL database, have available a [version of thrift][2] which has been tweaked to run on OpenSolaris. Using this, and a take on their [installation script][3], we can get a working version of thrift.
+Thankfully, others have happened across the same problems. The [HyperTable][1] project, a very admirable NoSQL database, have made available a [version of thrift][2] which has been tweaked to run on OpenSolaris. Using this, and a take on their [installation script][3], we can get a working version of thrift.
 
 Here's a script with all the commands to get you started:
 
