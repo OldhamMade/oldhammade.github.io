@@ -11,7 +11,7 @@ published: true
 
 The quickest, and in my opinion the safest[^1], way to get pretty-URLs working in IIS is to create a custom 404 handler. This `wp-404-handler.php` file is here:
 
-    <php
+    <?php
     $qs = $_SERVER['QUERY_STRING'];
     $pos = strrpos($qs, '://');
     $pos = strpos($qs, '/', $pos + 4);
