@@ -7,7 +7,7 @@ tags:
   - tools
 published: true
 ---
-After a exciting summer visiting EuroPython and working with an exciting new client,
+After an action-packed summer visiting EuroPython and working with an exciting new client,
 I've recently found some time to launch another in a line of online tools I have planned.
 
 [YAML-tool.net](http://yaml-tool.net) is a simple tool to work with YAML data. Current
