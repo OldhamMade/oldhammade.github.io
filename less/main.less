@@ -1,14 +1,24 @@
-.font-light {
+.font-logo {
 	font-family: "Avenir Next W01 Thin", sans-serif;
 }
 
+.font-logo-bold {
+	font-family: "Avenir Next W01 Bold", sans-serif;
+}
+
+.font-light {
+	font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+}
+
 .font-medium {
-	font-family: "AvenirNextLTW01-Regular", sans-serif;
+	font-family: "Oxygen", sans-serif;
+    font-weight: 400;
 }
 
 .font-bold {
-	//font-family:'AvenirNextLTW01-BoldSC', sans-serif;
-    font-family: "Avenir Next LT W01 Bold", sans-serif;
+	font-family: "Oxygen", sans-serif;
+    font-weight: 700;
 }
 
 .font-mono {
@@ -29,7 +39,7 @@ html {
 }
 
 body {
-    background: #FEFEFE;
+    background: #FFF;
     padding-bottom: 100px;
     letter-spacing: -0.03em;
 
@@ -129,6 +139,7 @@ body div.header {
     color: #555;
 
     & h1 {
+        .font-logo;
         margin: 0;
         text-transform: uppercase;
         font-size: 40px;
@@ -145,7 +156,7 @@ body div.header {
         }
 
         span {
-        	.font-bold;
+        	.font-logo-bold;
         }
     }
 
