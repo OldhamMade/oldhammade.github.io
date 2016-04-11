@@ -4,7 +4,11 @@ layout: common
 
 <div class="masthead">
 <h2>{{ page.title }}</h2>
-<p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
+<p class="date">
+  <span class="month">{{ page.date | date: "%b" }}</span>
+  <span class="day">{{ page.date | date: "%d" }}</span>
+  <span class="year">{{ page.date | date: "%Y" }}</span>
+</p>
 </div>
 
 <div class="page">
@@ -27,6 +31,7 @@ layout: common
 
 <div class="signature">
   <ul class="taglist">
+    <li class="title">Tagged in</li>
     {% for tag in page.tags %}
     <li><a href="/tags.html#{{tag}}">{{ tag }}</a></li>
     {% endfor %}
