@@ -7,17 +7,17 @@
 }
 
 .font-light {
-	font-family: "Oxygen", sans-serif;
+	font-family: "Lato", sans-serif;
     font-weight: 300;
 }
 
 .font-medium {
-	font-family: "Oxygen", sans-serif;
+	font-family: "Lato", sans-serif;
     font-weight: 400;
 }
 
 .font-bold {
-	font-family: "Oxygen", sans-serif;
+	font-family: "Lato", sans-serif;
     font-weight: 700;
 }
 
@@ -62,32 +62,37 @@ body {
 }
 
 a {
-    color: #036;
+    color: #000;
     text-decoration: none;
     .link-transition;
 
     &:hover {
-        color: #000;
+        text-decoration: underline;
     }
 
     &.ss-icon {
         color: #888;
+        text-decoration: none;
     }
 
     &.email:hover {
         color: #3bc492;
+        text-decoration: none;
     }
 
     &.twitter:hover {
         color: #55ACEE;
+        text-decoration: none;
     }
 
     &.octocat:hover {
         color: #CC3399;
+        text-decoration: none;
     }
 
     &.linkedin:hover {
         color: #4875B4;
+        text-decoration: none;
     }
 }
 
@@ -102,7 +107,7 @@ a {
 
     li {
         display: inline;
-        color: #999;
+        color: #777;
 
         &:after {
             content: ", ";
@@ -113,11 +118,12 @@ a {
         }
 
         a {
-            color: #999;
+            color: #555;
             .link-transition;
 
             &:hover {
-                color: #000;
+                color: #369;
+                text-decoration: underline;
             }
         }
 
@@ -148,10 +154,11 @@ body div.header {
         letter-spacing: -0.06em;
 
         & a {
-            color: #555;
+            color: #000;
 
             &:hover {
-                color: #000;
+                color: #369;
+                text-decoration: underline;
             }
         }
 
