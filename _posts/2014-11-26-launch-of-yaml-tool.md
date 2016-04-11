@@ -5,6 +5,7 @@ excerpt: "A simple tool for reformatting & transforming YAML data"
 category: blog
 tags:
   - tools
+  - yaml
 published: true
 ---
 After an action-packed summer visiting EuroPython and working with an exciting new client,
