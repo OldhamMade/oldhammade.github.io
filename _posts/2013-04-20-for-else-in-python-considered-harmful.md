@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "for...else in Python is wrong"
+title: "for...else in Python should be considered harmful"
 excerpt: ""
 category: article
 tags:
@@ -10,9 +10,10 @@ published: true
 ---
 
 Big (and potentially career-destroying!) statement:
-### The `else` block for a `for` statement in Python is just wrong.
 
-Or rather, its very misleading. When starting out in any new language having a
+### The `else` block for a `for` statement in Python should be considered harmful.
+
+Well, to devs new to Python, anyway. As you start out in a new language while having a
 background in another, you look for the keywords which make sense to you to get
 a "handle" on things. My first thoughts when seeing the `else` keyword
 after a `for` was "if there aren't any items to iterate over, execute
@@ -26,8 +27,9 @@ From the docs:
 > through exhaustion of the list (with `for`) or when the condition becomes false
 > (with `while`), but not when the loop is terminated by a `break` statement.
 
-Which does make some sense... but it would make _much_ more sense for a `then` keyword in
-this instance. For example:
+Which does make some sense, especially when you look at the syntax around `try`/`except`.
+However, in my opinion it would make _much_ more sense for a `then` keyword in this instance. 
+For example:
 
 
     for x in my_list:
