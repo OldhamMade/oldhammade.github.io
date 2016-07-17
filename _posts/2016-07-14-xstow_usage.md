@@ -15,13 +15,22 @@ your dotfile storage.
 
 From the manpage:
 
-    Stow is a replacement of GNU Stow (stow) written in C++. It supports all 
-    features of Stow with some extensions.
+    Stow is a tool for managing the installation of multiple software packages in the same 
+    run-time directory tree.
+    
+    The approach used by Stow is to install each package into its own tree, then use 
+    symbolic links to make it appear as though the files are installed in the common 
+    tree. Administration can be performed in the package's private tree in isolation 
+    from clutter from other packages. Stow can then be used to update the symbolic 
+    links. The structure of each private tree should reflect the desired structure in 
+    the common tree; i.e. (in the typical case) there should be a bin directory 
+    containing executables, a man/man1 directory containing section 1 man pages, 
+    and so on.
 
-    Stow as GNU Stow, are programs for managing the installation of software packages, 
-    keeping them separate (/usr/local/stow/emacs vs. /usr/local/stow/perl, for example) 
-    while making them appear to be installed in the same place (/usr/local).
-
+Additionally, one can use stow to symlink dotfiles by grouping them into "packages"
+within a specific version-controlled tree. For example, one could have a `.dotfiles`
+directory in their homedir, containing the "package" `bash` with the configuration 
+file `.bashrc`, and symlink this file to `~/.bashrc` with a simple command.
 
 ## Quick Usage
 
