@@ -13,7 +13,7 @@ designed specifically with embedded devices in mind (no GUI related dependencies
 which weighs in under 20 megabytes).
 
 To install, edit your `/etc/apt/sources.list` file and add the following (for 
-Raspberry Pi<sup><a href="#footnote-1">&#8224;</a></sup>):
+Raspberry Pi <a href="#footnote-1">&#8224;</a>):
 
     deb http://packages.erlang-solutions.com/debian jessie contrib
     
