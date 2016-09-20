@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Erlang-mini on Raspberry Pi
-excerpt: ""
+excerpt: "Install a minimal version of erlang on your small device"
 category: tip
 tags:
   - Erlang
