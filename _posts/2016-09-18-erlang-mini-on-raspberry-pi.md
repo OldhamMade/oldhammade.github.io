@@ -12,7 +12,8 @@ tags:
 designed specifically with embedded devices in mind (no GUI related dependencies etc), 
 which weighs in under 20 megabytes).
 
-To install, edit your `/etc/apt/sources.list` file and add the following (for Raspberry Pi[^1]):
+To install, edit your `/etc/apt/sources.list` file and add the following (for 
+Raspberry Pi<sup><a href="#footnote-1">*</a></sup>]):
 
     deb http://packages.erlang-solutions.com/debian jessie contrib
     
@@ -51,6 +52,6 @@ And you're done!
 
 ***
 
-[^1] The package is also for the Parallella; add 
+<span id="footnote-1"></span>The package is also for the Parallella; add 
 `deb http://packages.erlang-solutions.com/debian oneiric contrib` to your 
 `/etc/apt/sources.list` file.
