@@ -8,6 +8,10 @@ tags:
   - Distillery
   - exrm
 ---
+Just some quick notes around Elixir deployments, in no particular order...
+
+***
+
 In tutorials, where to see `exrm`, be sure to use [Distillery](https://github.com/bitwalker/distillery).
 
 ***
