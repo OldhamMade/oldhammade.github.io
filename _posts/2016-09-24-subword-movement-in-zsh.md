@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Subword movement in ZSH
-excerpt: ""
+excerpt: "Handy tip for ZSH users coming from Emacs"
 category: tip
 tags:
   - zsh
