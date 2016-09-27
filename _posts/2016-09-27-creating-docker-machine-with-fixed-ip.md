@@ -45,6 +45,9 @@ docker-machine regenerate-certs testy-mctestface
 To regenerate the certs, something docker would complain about if you ran 
 `docker-machine env testy-mctestface`.
 
+Stop and start the machine one final time, and run `docker-machine ls` -- you should see your
+new machine listed, with it's correct IP, and there shouldn't be any errors in the far-right column.
+
 ***
 
 This trick will allow you to set up custom `/etc/hosts` entries for your machines without having to 
