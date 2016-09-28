@@ -8,6 +8,14 @@ tags:
   - docker-machine
   - networking
 ---
+**Update:**
+
+[docker-machine-ipconfig](https://github.com/fivestars/docker-machine-ipconfig) builds on the approach
+I outline below, providing a more complete solution. In addition to setting the IP, it also disables
+the DHCP service running on the docker machine and fixes-up the certificates for you.
+
+***
+
 If you run multiple docker machines for different projects, you might find problems due to the
 dynamic assignments of IPs on startup.
 
