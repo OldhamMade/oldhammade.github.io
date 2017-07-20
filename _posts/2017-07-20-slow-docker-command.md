@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to fix a hanging docker command on macOS
+excerpt: "If executing `docker` is slow, this might be the cause."
 category: tip
 tags:
   - macOS
