@@ -3,6 +3,7 @@ layout: post
 title: "Querying for Entities with Ancestors with a partial Key"
 excerpt: "Retrieve an Entity which has Parents when you only have the Entity's Key"
 category: development
+published: false
 tags:
   - Google Datastore
   - GQL
