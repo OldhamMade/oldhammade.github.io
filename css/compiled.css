@@ -256,6 +256,7 @@ body div.header h1 span {
   /* font-family: "Avenir Next W01 Bold", sans-serif; */
     font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     font-weight: 700;
+    letter-spacing: normal;
 }
 body div.header dl {
   position: absolute;
