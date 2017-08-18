@@ -99,12 +99,12 @@ textarea {
 .font-logo {
   /*font-family: "Avenir Next W01 Thin", sans-serif;*/
     font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    font-weight: 300;
+    font-weight: 200;
 }
 .font-logo-bold {
     /*font-family: "Avenir Next W01 Bold", sans-serif;*/
     font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    font-weight: 700;
+    font-weight: 800;
 }
 .font-body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
