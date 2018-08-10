@@ -65,13 +65,18 @@ main
     grid-template-rows: 180px 7em 7em auto 300px
     font-size: .9em
 
+    /* target IE 10 & 11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+      margin: 0 10px
+
+    /* target Edge
+    @supports (-ms-accelerator:true)
+      margin: 0 10px
+
   @media (max-width: $media-sml)
     grid-template-columns: 1em auto 1em
     grid-template-rows: 180px 7em 7em auto 300px
 
-  /* target IE 10 & 11
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
-    margin: 0 10px
 
   a
     color: $colors-links
