@@ -4,9 +4,10 @@ title: Useful Docker shell aliases, functions, and notes
 excerpt: ""
 category: tip
 tags:
-  - Docker
+  - docker
   - bash
   - zsh
+  - linux
 ---
 Some useful shell aliases, functions, and notes if you use Docker.
 

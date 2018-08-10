@@ -15,3 +15,5 @@ We noticed that our servers' clocks were slightly off. Adding the following to o
     date -u --set="$2 $3"
 
 I've also added it to our cron.daily so there's no slip while the servers are running.
+
+On this particular server we were resource-limited, so installing `ntpd` wasn't an option. However, if you have the resources then this would be the preferred approach.

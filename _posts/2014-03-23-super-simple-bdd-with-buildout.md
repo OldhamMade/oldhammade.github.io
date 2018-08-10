@@ -1,4 +1,18 @@
-I've been doing BDD for years. I've never used Lettuce, or behave, or Cucumber, or in fact any BDD framework. I've never needed to, as I can achieve a similar result with the tools I'm already using: Python and Buildout.
+---
+layout: post
+title: "Super simple BDD with Buildout"
+excerpt: "Behaviour-Driven Development without the overhead"
+category: blog
+tags:
+  - bdd
+  - tdd
+  - buildout
+  - python
+published: true
+---
+I've been doing BDD for years. I've never used Lettuce, or behave, or Cucumber, or in fact any BDD framework. I've never really needed to, as I can achieve a similar result with the tools I'm already using: Python and Buildout.
+
+***
 
 To get started, we add the following additions to our Buildout config:
 
@@ -28,19 +42,13 @@ To get started, we add the following additions to our Buildout config:
 
 As you can see we're using `nose` to aggregate and run our tests, but we're tweaking the way it works and specifying that it should look in a "specs" directory.
 
-The "BDD" magic is in the 2 `--include` lines. Here we tell nose to include files and classes that end with either `spec(s)` or `example(s)`, and tests that start with the BDD keywords: `it`, `ensure`, `must`, and `should`.
+The "BDD" magic is in the 2 `--include` lines. Here we tell `nose` to include files and classes that end with either `Spec(s)` or `Example(s)`, and tests that start with the BDD keywords: `it`, `ensure`, `must`, and `should`.
 
-However, the real star of the show is Pinocchio. By specifying `--with-spec` and `--spec-color` we get nicely laid-out, colourised test results which you saw in the screenshot at the top of the article.
+However, the real star of the show is Pinocchio. By specifying `--with-spec` and `--spec-color` we get nicely laid-out, colourised test results.
 
 Here's an example of the sort of spec file we'd create in our project, `./specs/foo_spec.py`:
 
-    try:
-        import unittest2 as unittest
-    except ImportError:
-        import unittest
-
-    from nose.plugins.skip import SkipTest
-
+    import unittest
     from foo import foo
 
     class FooSpec(unittest.TestCase):

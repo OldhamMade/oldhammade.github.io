@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to fix a hanging docker command on macOS
-excerpt: "If executing `docker` is slow, this might be the cause."
+title: One solution to fix a hanging docker command on macOS
+excerpt: "If executing `docker` is slow, this fix may help."
 category: tip
 tags:
   - macOS
@@ -17,7 +17,7 @@ would take around 32s to run:
     docker -v  0.01s user 0.02s system 0% cpu 32.064 total
 
 After some digging around, I found that this was because I had some old `DOCKER_*` env vars
-knocking about. You can check this by running the following:
+loaded into my environment. You can check your environment by running the following:
 
     $ set|grep DOCKER
   
@@ -27,4 +27,4 @@ the `docker-machine env` command, thusly:
     $ eval $(docker-machine env my-machine)
   
 It seems that the `docker` command was simply timing out when trying to connect to the machine;
-spinning up a machine to respond, and setting the correct env vars, and the problem goes away.
+spinning up a machine to respond, and setting the correct env vars, sees the problem go away.

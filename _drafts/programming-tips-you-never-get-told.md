@@ -1,10 +1,21 @@
+---
+layout: post
+title: "Development tips for new programmers"
+tags:
+- development
+published: true
+---
+
+
 Commits:
 
-PMs want the ticket number. Devs want an outline of what you changed. Keep it simple.
+Project Managers want the ticket number. Devs want an outline of what you changed. Keep it simple and concise, but do try to include relevant information.
 
 Regular Expressions:
 
-If your language of choice has the option, ALWAYS use "verbose". If not, place each logical chunk of your regex into a list, each list item on a new line, and use a comment to describe what that chunk is doing. Implode the list into a string to use it.
+If your language of choice has the option, **always** enable the `verbose` flag. If this isn't available, try to place each logical chunk of your regex into a set of strings, each item on a new line, and use a comment to describe what that chunk is doing. Implode the list into a string to use it.
+
+Regexes are often "write once, read never". They're complex, they are extremely succinct, and it can be very hard to capture the *why* behind the actions being taken. The `verbose` flag allows you to structure and comment your intention, which anyone looking at the code (including your future self) will be thankful for.
 
 You are not a good programmer:
 

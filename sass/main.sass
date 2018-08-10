@@ -1,0 +1,411 @@
+@import reset.sass
+@import fonts.sass
+@import url("/webfonts/ss-social-circle.css")
+
+$font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+$font-monospaced: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, "Courier-New", monospace;
+
+$font-avenir-light: "Avenir Next W01 Thin"
+$font-avenir-regular: "AvenirNextLTW01-Regular"
+$font-avenir-bold: "AvenirNextLTW01-BoldSC"
+
+$font-title: $font-avenir-regular, $font-primary
+
+$font-logo: $font-avenir-light, sans-serif
+$font-logo-bold: $font-avenir-bold, sans-serif
+
+$colors-text: #333
+$colors-links: #556
+$colors-links-hover: #FF7000
+$colors-logo: #44444F
+$colors-bg: #FAFAFA
+
+$media-lrg: 1100px
+$media-med: 640px
+$media-sml: 400px
+
+=link-transition
+  -webkit-transition: color 0.2s ease-in
+  -moz-transition: color 0.2s ease-in
+  -o-transition: color 0.2s ease-in
+  transition: color 0.2s ease-in
+
+// basic rules
+
+html, body, main
+  width: 100%
+  height: 100%
+
+html
+  font-family: $font-primary
+  background: $colors-bg
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+
+body
+  -webkit-text-size-adjust: 100%
+
+  background: $colors-bg
+  color: $colors-text
+
+main
+  display: grid
+  grid-template-columns: auto 400px 600px auto
+  grid-template-rows: 200px 100px auto 300px
+
+  @media (max-width: $media-lrg)
+    grid-template-columns: 1em auto 1em
+    grid-template-rows: 180px 10% 10% auto 300px
+
+    max-width: 800px
+    margin: 0 auto
+
+  @media (max-width: $media-med)
+    grid-template-columns: 1em auto 1em
+    grid-template-rows: 180px 7em 7em auto 300px
+    font-size: .9em
+
+  @media (max-width: $media-sml)
+    grid-template-columns: 1em auto 1em
+    grid-template-rows: 180px 7em 7em auto 300px
+
+  a
+    color: $colors-links
+    text-decoration: none
+
+    &:hover
+      color: $colors-links-hover
+      +link-transition
+
+  strong
+    font-weight: 700
+
+  em
+    font-style: italic
+
+  blockquote
+    border-left: 2px solid #CCC
+    padding-left: 1em
+    color: #444
+
+.logo
+  grid-column-start: 2
+  grid-column-end: 3
+  grid-row: 1
+
+  h1
+    font-family: $font-logo
+    margin: 50px 0 0 0
+    text-transform: uppercase
+    font-size: 50px
+    line-height: 43px
+    word-spacing: -8px
+    letter-spacing: -0.06em
+
+    a
+      color: $colors-logo
+      text-decoration: none
+
+    span
+      font-family: $font-logo-bold
+      display: block
+
+    .hidden
+      display: none
+
+
+.tagline
+  grid-column-start: 2
+  grid-column-end: 3
+  grid-row: 2
+
+  @media (max-width: $media-lrg)
+    font-size: .9em
+
+  @media (max-width: $media-sml)
+    font-size: .8em
+
+  p
+    width: 80%
+    line-height: 1.5
+    word-spacing: 0.2rem
+
+    @media (max-width: $media-med)
+      width: 90%
+
+.social
+  grid-column-start: 2
+  grid-column-end: 3
+  grid-row: 3
+
+  margin-top: 2em
+  font-size: 2em
+  color: #AAA
+
+  @media (max-width: $media-lrg)
+    margin-top: 0
+
+  @media (max-width: $media-med)
+    margin-top: .5em
+
+  @media (max-width: $media-sml)
+    margin-top: .5em
+
+  a
+    color: inherit
+
+    +link-transition
+
+    &.email:hover
+        color: #3bc492
+        text-decoration: none
+
+    &.twitter:hover
+        color: #55ACEE
+        text-decoration: none
+
+    &.octocat:hover
+        color: #CC3399
+        text-decoration: none
+
+    &.linkedin:hover
+        color: #4875B4
+        text-decoration: none
+
+.contents
+  grid-column-start: 3
+  grid-column-end: 4
+  grid-row-start: 2
+  grid-row-end: 4
+
+  @media (max-width: $media-lrg)
+    grid-column: 2
+    grid-row: auto
+
+.footer
+  /* display: none
+  grid-column-start: 3
+  grid-column-end: 4
+  grid-row: 4
+
+  @media (max-width: $media-lrg)
+    grid-column: 2
+    grid-row: auto
+
+  margin: 50px 0 0 0
+  padding: 2em 0 0 0
+  font-size: .8em
+  font-weight: 100
+  color: #AAA
+  border-top: 1px solid #CCC
+
+.post
+  margin: 0 0 2em 0
+  font-weight: 100
+
+  h3
+    font-family: $font-title
+    font-size: 1.4em
+    line-height: .9
+    margin-bottom: .4em
+    letter-spacing: -0.03em
+
+  a
+    +link-transition
+
+    &:hover
+      color: $colors-links-hover
+
+  .excerpt
+    line-height: 1.4
+
+  .taglist
+    font-size: .9em
+    margin-top: .5em
+    font-style: italic
+
+  .date
+    font-size: .8em
+    margin-top: .5em
+    font-style: italic
+    word-spacing: 0
+    color: #BBB
+
+    &:hover
+      +link-transition
+      color: #333
+
+.masthead
+  margin-bottom: 3em
+
+  @media (max-width: $media-med)
+    margin-bottom: 2em
+
+  h2
+    font-family: $font-title
+    font-size: 3em
+    line-height: 1.1
+    letter-spacing: -0.03em
+
+    @media (max-width: $media-med)
+      font-size: 2em
+
+  p.date
+    font-size: .9em
+    letter-spacing: -0.06em
+    float: right
+
+.tagsection
+  h3
+    font-family: $font-title
+    font-size: 2em
+    line-height: .9
+    letter-spacing: -0.03em
+    margin-bottom: 1em
+    border-bottom: 1px dotted #CCC
+
+.page
+  h2
+    font-family: $font-title
+    font-size: 1.5em
+    line-height: .9
+    letter-spacing: -0.03em
+    margin: 1.5em 0 1em 0
+
+  h3
+    font-family: $font-title
+    font-size: 1.3em
+    line-height: .9
+    letter-spacing: -0.03em
+    margin: 1.5em 0 1em 0
+
+  p
+    margin: 1em 0
+    line-height: 1.4
+
+  a
+    border-bottom: 1px solid #CCC
+
+    &:hover
+      border-color: #EEE
+
+  ul
+    li
+      list-style: disc
+      margin: .3em 0 .5em 2em
+      line-height: 1.4
+
+
+  code
+    font-family: $font-monospaced
+    background: #F0F0F0
+    padding: 0 .5em
+    font-size: .9em
+    border-radius: 3px
+
+  pre
+    position: relative
+    margin: .5em 0 2em 0
+    border-radius: 3px
+    border: 1px solid #C3CCD0
+    background: #FFF
+    overflow: hidden
+    font-family: $font-monospaced
+
+    code
+      display: block
+      padding: 5px 15px
+      overflow-y: auto
+      font-size: 14px
+      line-height: 20px
+      font-family: $font-monospaced
+
+
+    code.has-numbering
+      margin-left: 31px
+
+    .pre-numbering
+      position: absolute
+      top: 0
+      left: 0
+      width: 30px
+      padding: 5px 5px 5px 0
+      margin: 0
+      border-right: 1px solid #C3CCD0
+      border-radius: 3px 0 0 3px
+      background-color: #DDD
+      text-align: right
+      color: #777
+      list-style: none
+      font-size: 14px
+      line-height: 20px
+      cursor: default
+
+      li
+        list-style: none
+        margin: 0
+        line-height: 20px
+
+.footnotes
+  font-style: italic
+  font-size: .8em
+  margin: 4em 2em 0 1em
+
+
+.signature
+  text-align: center
+  p
+    margin: 1em 0 0 0
+    font-size: .9em
+    color: #999
+
+  .taglist
+    font-size: .9em
+
+.next
+  margin-top: 2em
+  text-align: center
+
+  .social
+    margin: 1em 0 0 0
+    font-size: 2em
+
+
+.backhome
+  margin: 2em 0 0 0
+  text-align: center
+  font-size: .9em
+
+.taglist
+  clear: both
+  list-style: none
+  padding: 0
+  margin: 0
+  color: #999
+
+  li
+    display: inline
+
+    &.title:after
+      content: ": "
+
+    &:after
+      content: ", "
+
+    &:last-child:after
+      content: ""
+
+    a
+      +link-transition
+
+      color: #888
+
+      &:hover
+        color: $colors-links-hover
+        text-decoration: underline
+
+hr
+  border: 0
+  border-top: 1px solid #CCC
+  width: 70%
+  margin: 2em auto

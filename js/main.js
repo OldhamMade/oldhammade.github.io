@@ -11,6 +11,5 @@ $(function(){
             $numbering.append($('<li/>').text(i));
         }
     });
-
-    hljs.initHighlightingOnLoad();
 });
+hljs.initHighlightingOnLoad();

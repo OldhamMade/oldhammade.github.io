@@ -8,73 +8,75 @@
 <!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
   <head>
-	<title>{{ page.title }} - Oldham-Made: Python/XSL/Xquery Development and Scrum consultancy</title>
-
-    <meta charset="utf-8" />
-
-    <meta http-equiv="imagetoolbar" content="no"/>
-    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0" />
-    <meta name="robots" content="index,follow"/>
-    <meta name="author" content="Oldham-Made" />
-    <meta name="language" content="english" />
-
-    <meta name="description" content="Contract/freelance Python, XSL/XQuery development and Scrum consultancy." />
-    <meta name="keywords" content="contract development, web consultancy, web developer, python developer, xquery developer, xsl developer, scrum master, scrum" />
-
-    <link rel="canonical" href="http://oldham-made.net/" />
-
     <!--[if lt IE 9]>
       <script src="/js/html5.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Nunito+Sans:200,800|Inconsolata|Roboto+Condensed:300|Roboto:400,100,300,500" />
-	<link rel="stylesheet" href="//fast.fonts.net/cssapi/bdf47b5b-d16e-4862-aa49-8d2224a2416b.css" />
-	<link rel="stylesheet" href="/webfonts/ss-social-circle.css" />
-	<link rel="stylesheet" href="/webfonts/ss-social-regular.css" />
-	<link rel="stylesheet" href="/webfonts/ss-standard.css" />
-	<link rel="stylesheet" href="//highlightjs.org/static/styles/foundation.css" />
-    <link rel="stylesheet" href="/css/compiled.css" />
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/app.css" />
+
+    {% seo %}
+    <meta name="keywords" content="contract development, web consultancy, web developer, python developer, xquery developer, xsl developer, scrum master, scrum" />
+
+
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <meta name="language" content="english" />
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="/js/main.js"></script>
 
   </head>
   <body>
+    <main>
+      <div class="logo">
+        <h1><a href="/">Oldham<span class="hidden">-</span><span>Made</span> <span class="hidden">Ltd</span></a></h1>
+      </div>
 
-    <div class="header">
-      <h1><a href="/">OLDHAM<span>MADE</span></a></h1>
-      <p>Python, Elixir, and XSL/XQuery development. Scrum consultancy.</p>
-    </div>
+      <div class="tagline">
+        <p>Delivery-focussed Elixir, Python, XSL/XQuery, (No)SQL, and Agile consultancy, specialising in content migration, API design, and (micro)services.</p>
+      </div>
 
-    <div class="social">
-      <p>
-      	<a href="mailto:info@oldhammade.net"
-           title="Email"
-           class="ss-icon ss-social-circle email"
-           target="_blank"
-        >Email</a>
-      	<a href="https://www.linkedin.com/company/Oldham-Made-Ltd"
-           title="LinkedIn"
-           class="ss-icon ss-social-circle linkedin"
-           target="_blank"
-        >LinkedIn</a>
-      	<a href="http://twitter.com/OldhamMade"
-           title="Twitter"
-           class="ss-icon ss-social-circle twitter"
-           target="_blank"
-        >Twitter</a>
-      	<a href="http://github.com/OldhamMade"
-           title="Github"
-           class="ss-icon ss-social-circle octocat"
-           target="_blank"
-        >Octocat</a>
-      </p>
-    </div>
+      <div class="social">
+        <p>
+      	  <a href="mailto:info@oldhammade.net"
+             title="Email"
+             class="ss-icon ss-social-circle email"
+             target="_blank"
+          >Email</a>
+      	  <a href="https://www.linkedin.com/company/Oldham-Made-Ltd"
+             title="LinkedIn"
+             class="ss-icon ss-social-circle linkedin"
+             target="_blank"
+          >LinkedIn</a>
+      	  <a href="http://twitter.com/OldhamMade"
+             title="Twitter"
+             class="ss-icon ss-social-circle twitter"
+             target="_blank"
+          >Twitter</a>
+      	  <a href="http://github.com/OldhamMade"
+             title="Github"
+             class="ss-icon ss-social-circle octocat"
+             target="_blank"
+          >Octocat</a>
+      	  <a href="/feed.xml"
+             title="RSS Feed"
+             class="ss-icon ss-social-circle rss"
+             target="_blank"
+          >RSS</a>
+        </p>
+      </div>
 
-    <div class="contents">{{ content }}</div>
+      <div class="contents">{{ content }}</div>
 
-    <div class="footer"></div>
-
+      <div class="footer">
+        <p>&#169; {{ site.time | date: "%Y" }} Oldham-Made Ltd</p>
+      </div>
+    </main>
 	<script>
 	 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

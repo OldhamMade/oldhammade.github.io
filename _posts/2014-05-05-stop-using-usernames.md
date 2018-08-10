@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stop using usernames!"
-excerpt: "Honestly. It will make things much easier for your users."
+excerpt: "Seriously. It will make things much easier for your users."
 category: article
 tags:
   - development
@@ -18,7 +18,7 @@ If I don’t use that system much, I’m bound to forget the username. This actu
 
 And at this point things can start to get tricky, because with a lot of systems --- I’m specifically looking at *you*, PHPBB --- **you can’t recover your account without knowing your username**. [^1]
 
-Often times systems dictate that usernames are to be unique. It's horrible when you’re trying to register and you find that your usual username has been taken (stolen!!!) by another individual. Then you have to spend another 10 minutes trying to find an alternative or modification you’re happy with. Or you give in and use `myusualname_1292` which you promptly forget it as soon as you click "submit". Then you come to log in a few weeks later and… nope. Stuck. Can’t get back in.
+Often, systems dictate that usernames are to be unique. It's horrible when you’re trying to register and you find that your usual username has been taken by another individual -- some may even consider their username to have been stolen! Then you have to spend another 10 minutes trying to find an alternative or modification you’re happy with. Or you give in and use `myusualname_1292` which you promptly forget it as soon as you click "submit". Then you come to log in a few weeks later and… nope. Stuck. Can’t get back in.
 
 One solution that is becoming popular is to provide authentication via Google/Facebook/Twitter/OpenID. It’s simple for the user, for the most part, as they probably already have an account they can use. And if they don’t, they can quite easily get one.
 
@@ -28,7 +28,7 @@ Don't get me wrong --- I'm a fan of these solutions. Usually. But like many othe
 
 However, there is a very simple and elegant solution to all these headaches:
 
-Just replace `username` with `email`.
+**Just replace `username` with `email`.**
 
 Done.
 

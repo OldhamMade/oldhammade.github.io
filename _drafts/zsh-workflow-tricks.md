@@ -1,6 +1,6 @@
 `!!` retrieves the last command.
 
-`CRTL-r` allows you to search history and insert/execute at the prompt.
+`CRTL-r` "reverse" search history and insert/execute at the prompt.
 
 `ESC-.` inserts the last argument of the previous history line, repeat to go back in history.
 

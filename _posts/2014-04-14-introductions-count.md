@@ -10,7 +10,7 @@ published: true
 
 I'm always on the hunt for new, useful open-source tools that can save me and my clients time (and money), and there's something I've noticed over the years --- the most successful projects have a great introduction.
 
-It doesn't take much. Just put a short paragraph displayed prominently on the homepage stating clearly what the project is/does and, importantly, how it can benefit me as a user.
+It doesn't take much: a short paragraph displayed prominently on the homepage stating clearly what the project is/does and, importantly, how it can benefit me as a user.
 
 It's so simple it often gets overlooked.
 

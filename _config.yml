@@ -1,4 +1,22 @@
-name: "Oldham-Made: Python, XML/XSL/XQuery, API, and (No)SQL consultancy"
+name: "Oldham-Made: Elixir, Python, XSL/XQuery, (No)SQL, and Agile consultancy"
 timezone: Europe/London
 markdown: kramdown
 url: http://oldham-made.net
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+description: >-
+  Contract/freelance Elixir, Python, XSL/XQuery, (No)SQL, and Agile consultancy.
+twitter:
+  username: OldhamMade
+social:
+  name: OldhamMade
+  links:
+    - https://twitter.com/OldhamMade
+    - https://www.linkedin.com/in/OldhamMade
+    - https://github.com/OldhamMade
+webmaster_verifications:
+  google: Mhxjdq6_m26wJcjQfmaKOSSEHkXMcffkmKx4NMDSc8g
+author: Oldham-Made Ltd
+lang: en_GB

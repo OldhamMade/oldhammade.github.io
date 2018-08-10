@@ -3,31 +3,14 @@ layout: common
 ---
 
 <div class="masthead">
-<h2>{{ page.title }}</h2>
-<p class="date">
-  <span class="month">{{ page.date | date: "%b" }}</span>
-  <span class="day">{{ page.date | date: "%d" }}</span>
-  <span class="year">{{ page.date | date: "%Y" }}</span>
-</p>
+  <h2>{{ page.title }}</h2>
 </div>
 
 <div class="page">
   {{ content }}
 </div>
 
-<div class="next">
-  <p class="social">
-    <a href="https://twitter.com/intent/tweet?text={{ page.title }} - {{ site.url }}{{ page.url }}"
-       target="_blank"
-       class="twitter ss-icon"
-       title="Share on Twitter">Twitter</a>
-    <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}"
-       target="_blank"
-       class="linkedin ss-icon"
-       title="Share on LinkedIn">LinkedIn</a>
-  </p>
-  <p class="backhome"><a href="/">&laquo; Back to the homepage</a></p>
-</div>
+<hr />
 
 <div class="signature">
   <ul class="taglist">
@@ -36,6 +19,28 @@ layout: common
     <li><a href="/tags.html#{{tag}}">{{ tag }}</a></li>
     {% endfor %}
   </ul>
-  <p>Written by Phillip Oldham, owner of Oldham-Made Ltd</p>
-  <p>&#169; {{ page.date | date: "%Y" }}</p>
+  <p class="date">
+    <span class="intro">Originally posted:</span>
+    <span class="month">{{ page.date | date: "%b" }}</span>
+    <span class="day">{{ page.date | date: "%d" }}</span>
+    <span class="year">{{ page.date | date: "%Y" }}</span>
+  </p>
+</div>
+
+<div class="next">
+  <p class="social">
+    <a href="https://twitter.com/intent/tweet?text={{ page.title }} - {{ site.url }}{{ page.url }}"
+       target="_blank"
+       class="twitter ss-icon ss-social-circle"
+       title="Share on Twitter">Twitter</a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+       target="_blank"
+       class="linkedin ss-icon ss-social-circle"
+       title="Share on LinkedIn">LinkedIn</a>
+    <a href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+       target="_blank"
+       class="reddit ss-icon ss-social-circle"
+       title="Share on Reddit">reddit</a>
+  </p>
+  <p class="backhome"><a href="/">Return to the homepage</a></p>
 </div>

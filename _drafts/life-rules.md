@@ -1,6 +1,6 @@
 1. Learn to say, "I don't know." If used when appropriate, it will be used often.
 2. It is easier to get into something than to get out of it.
-3. If you are not criticized, you may not be doing much
+3. If you are not criticized, you may not be doing enough
 4. Look for what is missing. Many know how to improve what's there; few can see what isn't there.
 5. Presentation rule: When something appears on a slide presentation, assume the world knows about it and deal with it accordingly.
 6. Work for a boss to whom you can tell it like it is. Remember, you can't pick your family, but you can pick your boss.
@@ -11,8 +11,8 @@
 11. Confirm the instructions you give others, and their commitments, in writing. Don't assume it will get done.
 12. Don't be timid: Speak up, express yourself and promote your ideas.
 13. Practice shows that those who speak the most knowingly and confidently often end up with the assignment to get the job done.
-14. Strive for brevity and clarity in oral and written reports.
-15. Be extremely careful in the accuracy of your statements.
+14. Strive for brevity and clarity in oral and written communication.
+15. Be extremely careful to ensure the accuracy of your statements.
 16. Don't overlook the fact that you are working for a boss. Keep him or her informed. Whatever the boss wants, within the bounds of integrity, takes top priority.
 17. Promises, schedules and estimates are important instruments in a well-run business. You must make promises — don't lean on the often-used phrase: "I can't estimate it because it depends on many uncertain factors."
 18. Never direct a complaint to the top; a serious offense is to "cc" a person's boss on a copy of a complaint before the person has a chance to respond to the complaint.
@@ -31,4 +31,4 @@
 31. When faced with decisions, try to look at them as if you were one level up in the organization. Your perspective will change quickly.
 32. A person who is nice to you but rude to the waiter, or to others, is not a nice person. (This rule never fails).
 33. Never be afraid to try something new. Remember, an amateur built an ark that survived a flood while a large group of professionals built the Titanic!
-34. The qualities of leadership boil down to confidence, dedication, integrity and love.
+34. The qualities of leadership boil down to confidence, dedication, integrity, and empathy.
