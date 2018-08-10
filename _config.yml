@@ -1,7 +1,7 @@
 name: "Oldham-Made: Elixir, Python, XSL/XQuery, (No)SQL, and Agile consultancy"
 timezone: Europe/London
 markdown: kramdown
-url: http://oldham-made.net
+url: http://oldhammade.net
 plugins:
   - jekyll-sitemap
   - jekyll-feed
