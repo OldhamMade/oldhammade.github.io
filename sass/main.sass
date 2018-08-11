@@ -86,7 +86,7 @@ main
     grid-template-columns: 0 auto 0
     grid-template-rows: 180px 7em 7em auto 300px
 
-    max-width: 320px
+    max-width: 310px
     margin: 0 auto
 
   a
@@ -153,6 +153,9 @@ main
 
     @media (max-width: $media-med)
       width: 90%
+
+    @media (max-width: $media-sml)
+      width: auto
 
 .social
   grid-column-start: 2
@@ -328,13 +331,28 @@ main
     background: #FFF
     overflow: hidden
     font-family: $font-monospaced
+    font-size: 14px
+    line-height: 18px
+
+    @media (max-width: $media-xlg)
+      max-width: $media-xlg - 120px
+      overflow: scroll
+    @media (max-width: $media-lrg)
+      max-width: $media-lrg - 120px
+      overflow: scroll
+    @media (max-width: $media-med)
+      max-width: $media-med - 120px
+      overflow: scroll
+    @media (max-width: $media-sml)
+      max-width: $media-sml - 120px
+      overflow: scroll
+      /* white-space: nowrap
+      font-size: .8rem
 
     code
       display: block
       padding: 5px 15px
       overflow-y: auto
-      font-size: 14px
-      line-height: 20px
       font-family: $font-monospaced
 
 
@@ -354,14 +372,12 @@ main
       text-align: right
       color: #777
       list-style: none
-      font-size: 14px
-      line-height: 20px
       cursor: default
 
       li
         list-style: none
         margin: 0
-        line-height: 20px
+        line-height: 18px
 
 .footnotes
   font-style: italic
