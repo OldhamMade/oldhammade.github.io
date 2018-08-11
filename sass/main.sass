@@ -20,9 +20,10 @@ $colors-links-hover: #FF7000
 $colors-logo: #44444F
 $colors-bg: #FAFAFA
 
-$media-lrg: 1100px
-$media-med: 800px
-$media-sml: 500px
+$media-xlg: 1100px
+$media-lrg: 820px
+$media-med: 620px
+$media-sml: 420px
 
 =link-transition
   -webkit-transition: color 0.2s ease-in
@@ -32,7 +33,7 @@ $media-sml: 500px
 
 // basic rules
 
-html, body, main
+html, body
   width: 100%
   height: 100%
 
@@ -41,42 +42,56 @@ html
   background: $colors-bg
   -webkit-font-smoothing: antialiased
   text-rendering: optimizeLegibility
+  background: $colors-bg
 
 body
   -webkit-text-size-adjust: 100%
 
-  background: $colors-bg
   color: $colors-text
 
 main
   display: grid
   grid-template-columns: auto 400px 600px auto
   grid-template-rows: 200px 100px auto 300px
+  margin: 0 1em
 
-  @media (max-width: $media-lrg)
-    grid-template-columns: 1em auto 1em
+  @media (max-width: $media-xlg)
+    grid-template-columns: 1px auto 1px
     grid-template-rows: 180px 10% 10% auto 300px
 
     max-width: 800px
     margin: 0 auto
 
-  @media (max-width: $media-med)
-    grid-template-columns: 1em auto 1em
+  @media (max-width: $media-lrg)
+    grid-template-columns: 0 auto 0
     grid-template-rows: 180px 7em 7em auto 300px
     font-size: .9em
 
+    max-width: 600px
+    margin: 0 auto
+
     /* target IE 10 & 11
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
-      margin: 0 10px
+    /* @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+    /*   margin: 0 10px
 
     /* target Edge
-    @supports (-ms-accelerator:true)
-      margin: 0 10px
+    /* @supports (-ms-accelerator:true)
+    /*   margin: 0 10px
 
-  @media (max-width: $media-sml)
-    grid-template-columns: 1em auto 1em
+  @media (max-width: $media-med)
+    grid-template-columns: 0 auto 0
     grid-template-rows: 180px 7em 7em auto 300px
 
+    max-width: 400px
+    margin: 0 auto
+
+
+  @media (max-width: $media-sml)
+    grid-template-columns: 0 auto 0
+    grid-template-rows: 180px 7em 7em auto 300px
+
+    max-width: 300px
+    margin: 0 auto
 
   a
     color: $colors-links
@@ -152,13 +167,10 @@ main
   font-size: 2em
   color: #AAA
 
-  @media (max-width: $media-lrg)
+  @media (max-width: $media-xlg)
     margin-top: 0
 
   @media (max-width: $media-med)
-    margin-top: .5em
-
-  @media (max-width: $media-sml)
     margin-top: .5em
 
   a
@@ -188,17 +200,16 @@ main
   grid-row-start: 2
   grid-row-end: 4
 
-  @media (max-width: $media-lrg)
+  @media (max-width: $media-xlg)
     grid-column: 2
     grid-row: auto
 
 .footer
-  /* display: none
   grid-column-start: 3
   grid-column-end: 4
   grid-row: 4
 
-  @media (max-width: $media-lrg)
+  @media (max-width: $media-xlg)
     grid-column: 2
     grid-row: auto
 
@@ -216,7 +227,7 @@ main
   h3
     font-family: $font-title
     font-size: 1.4em
-    line-height: .9
+    line-height: 1.1
     margin-bottom: .4em
     letter-spacing: -0.03em
 
@@ -269,7 +280,7 @@ main
   h3
     font-family: $font-title
     font-size: 2em
-    line-height: .9
+    line-height: 1.1
     letter-spacing: -0.03em
     margin-bottom: 1em
     border-bottom: 1px dotted #CCC
@@ -278,14 +289,14 @@ main
   h2
     font-family: $font-title
     font-size: 1.5em
-    line-height: .9
+    line-height: 1.1
     letter-spacing: -0.03em
     margin: 1.5em 0 1em 0
 
   h3
     font-family: $font-title
     font-size: 1.3em
-    line-height: .9
+    line-height: 1.1
     letter-spacing: -0.03em
     margin: 1.5em 0 1em 0
 
