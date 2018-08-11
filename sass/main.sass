@@ -49,10 +49,6 @@ body
 
   color: $colors-text
 
-  /* target IE 10 & 11
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
-    margin: 0 1em
-
 main
   display: grid
   grid-template-columns: auto 400px 600px auto
@@ -430,3 +426,12 @@ hr
   border-top: 1px solid #CCC
   width: 70%
   margin: 2em auto
+
+
+/* target IE 10 & 11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+  body
+    margin: 0 1em
+
+  main
+    margin: 0
