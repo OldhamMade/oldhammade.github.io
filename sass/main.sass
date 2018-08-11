@@ -49,6 +49,10 @@ body
 
   color: $colors-text
 
+  /* target IE 10 & 11
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+    margin: 0 1em
+
 main
   display: grid
   grid-template-columns: auto 400px 600px auto
@@ -69,10 +73,6 @@ main
 
     max-width: 600px
     margin: 0 auto
-
-    /* target IE 10 & 11
-    /* @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
-    /*   margin: 0 10px
 
     /* target Edge
     /* @supports (-ms-accelerator:true)
