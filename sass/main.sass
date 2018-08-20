@@ -18,7 +18,7 @@ $colors-text: #333
 $colors-links: #556
 $colors-links-hover: #FF7000
 $colors-logo: #44444F
-$colors-bg: #FAFAFA
+$colors-bg: #FFF
 
 $media-xlg: 1100px
 $media-lrg: 820px
@@ -285,6 +285,13 @@ main
     border-bottom: 1px dotted #CCC
 
 .page
+  h1
+    font-family: $font-title
+    font-size: 2em
+    line-height: 1.1
+    letter-spacing: -0.03em
+    margin: 0 0 1em 0
+
   h2
     font-family: $font-title
     font-size: 1.5em
@@ -436,6 +443,36 @@ main
       &:hover
         color: $colors-links-hover
         text-decoration: underline
+
+.page p.bloglink
+  clear: both
+  margin: 3em 0 0 0
+  text-align: center
+  /* line-height: 1.1
+  /* font-size: 1.2em
+
+.featured
+  dt
+    font-family: $font-title
+    font-size: 1.4em
+    line-height: 1.1
+    margin: 1em 0 .4em 0
+    letter-spacing: -0.03em
+
+    a
+      color: $colors-links
+      text-decoration: none
+      border-bottom: none
+
+      &:hover
+        color: $colors-links-hover
+        +link-transition
+
+  dd
+    margin: 0 2em 0 1em
+    line-height: 1.1
+    font-size: 1.1em
+
 
 hr
   border: 0

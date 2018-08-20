@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I hate TDD"
-excerpt: ""
+excerpt: "Or, more accurately, why I hate badly-named tests."
 tags:
   - development
   - python
@@ -10,7 +10,9 @@ tags:
 
 I know, another article with an inflamatory title. But it's true. I really do hate Test Driven Development.
 
-However, let me clarify that statement. I hate TDD *in Python*. I like testing. I think tests are great. I think testing in Python is great too. Yet when I see TDD tests written in Python, they make me want to claw my eyes out. They're so... unreadable.
+However, let me clarify that statement. I hate TDD *in Python*.
+
+Please don't get me wrong: I love testing. I advocate testing. I think testing in Python is great too. Yet when I see TDD tests written in Python, they make me want to claw my eyes out. They're so... unreadable.
 
 One of the primary reasons people use Python is because of it's inherent readability. There are [rules regarding formatting], there are guidelines on [how to document] our code, there's even [the Zen]. But there's nothing on how to write good tests, specifically test names, in Python.
 

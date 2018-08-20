@@ -1,13 +1,19 @@
 ---
-layout: default
+layout: common
 title: Welcome
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date: "%B %d, %Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="page">
+  <h1>Free-to-use Developer Resources</h1>
+  <dl class="featured">
+    <dt><a href="http://worldtimeapi.org" target="_blank">WorldTimeAPI.org</a></dt>
+    <dd>Plain-text/JSON API which provides the current time for an IP or timezone, targetted at IoT devices</dd>
+    <dt><a href="http://python-tool.net" target="_blank">Python-Tool.net</a></dt>
+    <dd>Online tool which can prettify/reformat Python data-structures, and convert them to JSON/YAML/XML</dd>
+    <dt><a href="http://json-tool.net" target="_blank">JSON-Tool.net</a></dt>
+    <dd>Online tool which can prettify/reformat JSON and convert it to YAML/XML</dd>
+    <dt><a href="http://xml-tool.net" target="_blank">XML-Tool.net</a></dt>
+    <dd>Online tool which can prettify/reformat XML</dd>
+  </dl>
+  <p class="bloglink">We also have a <a href="/blog/">blog</a>.</p>
 </div>
